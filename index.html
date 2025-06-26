@@ -15,33 +15,102 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -->
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <title>PSFree-Lapse Exploit For PS4 9.00</title>
-        <style>
-            @font-face {
-                font-family: 'logging';
-                src: url('fonts/LiberationMono-Regular.ttf');
-            }
-            #console {
-                font-family: 'logging';
-            }
-        </style>
-        <script>
-        if (window.applicationCache.status=='0')
-        {
-          window.location.replace("cache.html");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PSFree-Lapse Exploit For PS4 9.00</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: 'logging';
+            src: url('fonts/LiberationMono-Regular.ttf');
         }
-        </script>
-    </head>
-    <body>
-        PSFree: A PS4/PS5 Exploit Chain<br>
-        Donation (Monero/XMR):<br>
-        86Fk3X9AE94EGKidzRbvyiVgGNYD3qZnuKNq1ZbsomFWXHYm6TtAgz9GNGitPWadkS3Wr9uXoT29U1SfdMtJ7QNKQpW1CVS<br>
-        See <a href='./about.html' data-jslicense='1'>JavaScript license information</a> for the
-        source code and license.<br>
-        <pre id='console'></pre>
-    </body>
-    <script type='module' src='./alert.mjs'></script>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'logging', monospace;
+            background: url('assets/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-shadow: 0 0 20px rgba(0, 200, 255, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        p, a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        #console {
+            font-family: 'logging';
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            width: 90%;
+            margin-top: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+    </style>
+
+    <script>
+        if (window.applicationCache.status === 0) {
+            window.location.replace("cache.html");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h1>Jailbreak</h1>
+        <p>PSFree: A PS4/PS5 Exploit Chain</p>
+        <p>See <a href="./about.html" data-jslicense="1">JavaScript license information</a>.</p>
+        <pre id="console"></pre>
+    </div>
+
+    <footer>
+        by Ahmed Lokir & Haider Skiba for Game Zone – All rights reserved.
+    </footer>
+
+    <script type="module" src="./alert.mjs"></script>
+</body>
 </html>
